@@ -1,0 +1,244 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+	position: relative;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: #000000;
+}
+
+button:focus,
+input:focus {
+  outline: transparent;
+}
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+
+}
+.container-fluid{
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 30px;
+
+}
+@media (max-width:720px){
+	.container-fluid{
+		padding: 0 15px;
+	
+	}
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+	color: $text;
+	font-weight: 400;
+	overflow-x: hidden;
+
+
+}
+.title {
+	font-size: 36px;
+	list-style: 60px;
+text-align: center;
+	margin-bottom: 30px;
+	@include roboto-700;
+	color: $bg;
+
+}
+.rate-star{
+	display: inline-block;
+	margin-right: 13px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.content-page {
+	background-color: $gray; 
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.breadcrumbs {
+}
+ 
+.breadcrumbs__inner {
+	padding: 45px 0 40px;
+}
+.breadcrumbs__list {
+	li{
+		position: relative;
+		display: inline-block;
+		& + li {
+			padding-left: 24px;
+			&::before {
+				content: "-";
+				position: absolute;
+				left: 7px;
+				color: $green;
+			}
+		}
+		a{
+			color: #b0bec5;
+		}
+		&:last-child {
+			a, span {
+				color: $bg;
+			}
+		}
+	}
+}
+.angle-right {
+	position: relative;
+	padding-left: 15px;
+	&::before{
+		position: absolute;
+		content: "\f105";
+		@include icomoon;
+		color: $green;
+		left: 0;
+		font-size: 14px;
+	}
+}
+#modal {
+	display: none;
+	background-color: $green;
+	max-width: 730px;
+	padding-top: 90px;
+	padding-bottom: 100px;
+	width: 100%;
+	.login__title{
+		font-size: 48px;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 40px;
+		@include roboto-700;
+		text-align: center;
+	}
+	
+}
+.login__wrapper {
+	form {
+		max-width: 400px;
+		margin: 0 auto;
+		label {
+			width: 100%;
+			position: relative;
+			&:before{
+				position: absolute;
+				@include icomoon;
+				content: "\f007";
+				font-size: 14px;
+				color: #fff;
+				left: 18px;
+				top: 9px;
+
+			}
+
+		}
+		.login__label-name {
+		}
+		.login__label-password {
+			&:before{
+				content: "\f023";
+			}
+		}
+		input {
+			height: 43px;
+			margin-bottom: 8px;
+			background-color: #76ae36;
+			color: #FFF;
+			font-size: 14px;
+			padding-left: 40px;
+			display: block;
+			width: 100%;
+			&::placeholder {
+				color: #fff;
+				font-size: 14px;
+			}
+
+		}
+		button {
+			margin-top: 19px;
+			width: 140px;
+			background-color: #FFF;
+			padding: 18px 0  16px ;
+			font-size: 14px;
+			color: #000;
+			text-align: center;
+			@include roboto-700; 
+			text-transform: uppercase;
+			margin-right: 10px;
+			box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+		}
+	}
+}
+ .lost-pass {
+	 display: block;
+	 font-size: 18px;
+	 margin-top: 18px;
+	 color: #fff;
+ }
+ .create-acc {
+	 margin-top: 18px;
+	 padding: 15px 0 15px 28px;
+	 background-color: #76ae36;
+	 color: #fff;
+	 width: 244px;
+	 text-align: center;
+	 font-size: 18px;
+	 position: relative;
+	 &::before {
+		content: "\f044";
+		position: absolute;
+		@include icomoon;  
+		left: 34px;
+		top: 15px;
+	 }
+
+ }
+ .fancybox-button svg path {
+	fill: #fff;
+	stroke-width: 0;
+}
